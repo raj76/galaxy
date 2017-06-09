@@ -926,6 +926,9 @@ def wrap_in_middleware( app, global_conf, application_stack, **local_conf ):
                                       conf.get('graphite_port', 2003),
                                       conf.get('graphite_prefix', 'galaxy') ) )
         log.debug( "Enabling 'graphite' middleware" )
+    # If we're using CAS auth authentication, add middleware that does the authentication
+
+
     # If we're using remote_user authentication, add middleware that
     # protects Galaxy from improperly configured authentication in the
     # upstream server
